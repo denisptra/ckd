@@ -1,0 +1,394 @@
+
+[     UTC     ] Logs for ginjalkronis.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[19:46:35] 🖥 Provisioning machine...
+[19:46:35] 🎛 Preparing system...
+[19:46:35] ⛓ Spinning up manager process...
+[19:46:27] 🚀 Starting up repository: 'ckd', branch: 'master', main module: 'project/app.py'
+[19:46:27] 🐙 Cloning repository...
+[19:46:28] 🐙 Cloning into '/mount/src/ckd'...
+
+[19:46:28] 🐙 Cloned repository!
+[19:46:28] 🐙 Pulling code changes from Github...
+[19:46:29] 📦 Processing dependencies...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.14.6 environment at /home/adminuser/venv
+Resolved 61 packages in 1.00s
+  × Failed to download and build `llvmlite==0.36.0`
+  ╰─▶ Build backend failed to determine requirements with `build_wheel()`
+      (exit status: 1)
+
+      [stderr]
+      /home/adminuser/.cache/uv/builds-v0/.tmpJfdLhW/lib/python3.14/site-packages/setuptools/_vendor/wheel/bdist_wheel.py:4:
+      FutureWarning: The 'wheel' package is no longer the canonical location
+      of the 'bdist_wheel' command, and will be removed in a future release.
+      Please update to setuptools v70.1 or later which contains an integrated
+      version of this command.
+        warn(
+      Traceback (most recent call last):
+        File "<string>", line 14, in <module>
+          requires = get_requires_for_build({})
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmpJfdLhW/lib/python3.14/site-packages/setuptools/build_meta.py",
+      line 333, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+                 ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmpJfdLhW/lib/python3.14/site-packages/setuptools/build_meta.py",
+      line 301, in _get_build_requires
+          self.run_setup()
+          ~~~~~~~~~~~~~~^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmpJfdLhW/lib/python3.14/site-packages/setuptools/build_meta.py",
+      line 520, in run_setup
+          super().run_setup(setup_script=setup_script)
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmpJfdLhW/lib/python3.14/site-packages/setuptools/build_meta.py",
+      line 317, in run_setup
+          exec(code, locals())
+          ~~~~^^^^^^^^^^^^^^^^
+        File "<string>", line 55, in <module>
+        File "<string>", line 52, in _guard_py_ver
+      RuntimeError: Cannot install on Python version 3.14.6; only versions
+      >=3.6,<3.10 are supported.
+
+  help: `llvmlite` was included because `shap==0.52.0` depends on `llvmlite`
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.14.6 environment at /home/adminuser/venv
+Resolved 4 packages in 118ms
+Prepared 4 packages in 108ms
+Installed 4 packages in 24ms
+ + markdown-it-py==4.2.0
+ + mdurl==0.1.2
+ + pygments==2.20.0
+ + rich==15.0.0
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting streamlit (from -r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading streamlit-1.59.0-py3-none-any.whl.metadata (9.6 kB)
+Collecting pandas (from -r /mount/src/ckd/project/requirements.txt (line 2))
+  Downloading pandas-3.0.3-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 6.1 MB/s eta 0:00:00[2026-07-07 19:46:34.040295] 
+Collecting numpy (from -r /mount/src/ckd/project/requirements.txt (line 3))
+  Downloading numpy-2.5.1-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting scikit-learn (from -r /mount/src/ckd/project/requirements.txt (line 4))
+  Downloading scikit_learn-1.9.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+Collecting xgboost (from -r /mount/src/ckd/project/requirements.txt (line 5))
+  Downloading xgboost-3.3.0-py3-none-manylinux_2_28_x86_64.whl.metadata (2.0 kB)
+Collecting shap (from -r /mount/src/ckd/project/requirements.txt (line 6))
+  Downloading shap-0.52.0-cp312-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (26 kB)
+Collecting matplotlib (from -r /mount/src/ckd/project/requirements.txt (line 7))
+  Downloading matplotlib-3.11.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (80 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.3/80.3 kB 69.5 MB/s eta 0:00:00[2026-07-07 19:46:34.869488] 
+Collecting joblib (from -r /mount/src/ckd/project/requirements.txt (line 8))
+  Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+Collecting altair!=5.4.0,!=5.4.1,<7,>=4.0 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading altair-6.2.2-py3-none-any.whl.metadata (11 kB)
+Collecting blinker<2,>=1.5.0 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting cachetools<8,>=5.5 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading cachetools-7.1.4-py3-none-any.whl.metadata (5.5 kB)
+Collecting click<9,>=7.0 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading click-8.4.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting gitpython!=3.1.19,<4,>=3.0.7 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading gitpython-3.1.50-py3-none-any.whl.metadata (14 kB)
+Collecting packaging>=20 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+Collecting pillow<13,>=7.1.0 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading pillow-12.3.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting pydeck<1,>=0.8.0b4 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading pydeck-0.9.3-py2.py3-none-any.whl.metadata (4.2 kB)
+Collecting protobuf<8,>=3.20 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading protobuf-7.35.1-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+Collecting pyarrow>=7.0 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading pyarrow-24.0.0-cp314-cp314-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting requests<3,>=2.27 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting tenacity<10,>=8.1.0 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading tenacity-9.1.4-py3-none-any.whl.metadata (1.2 kB)
+Collecting toml<2,>=0.10.1 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Collecting typing-extensions<5,>=4.10.0 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting starlette>=0.40.0 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading starlette-1.3.1-py3-none-any.whl.metadata (6.4 kB)
+Collecting uvicorn>=0.30.0 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading uvicorn-0.50.2-py3-none-any.whl.metadata (6.7 kB)
+Collecting httptools>=0.6.3 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading httptools-0.8.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+Collecting anyio>=4.0.0 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading anyio-4.14.1-py3-none-any.whl.metadata (4.6 kB)
+Collecting python-multipart>=0.0.10 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+Collecting websockets>=12.0.0 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading websockets-16.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+Collecting itsdangerous>=2.1.2 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting watchdog<7,>=2.1.5 (from streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 195.4 MB/s eta 0:00:00[2026-07-07 19:46:36.838637] 
+Collecting python-dateutil>=2.8.2 (from pandas->-r /mount/src/ckd/project/requirements.txt (line 2))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting scipy>=1.10.0 (from scikit-learn->-r /mount/src/ckd/project/requirements.txt (line 4))
+  Downloading scipy-1.18.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.3/62.3 kB 238.0 MB/s eta 0:00:00[2026-07-07 19:46:37.206476] 
+Collecting narwhals>=2.0.1 (from scikit-learn->-r /mount/src/ckd/project/requirements.txt (line 4))
+  Downloading narwhals-2.23.0-py3-none-any.whl.metadata (15 kB)
+Collecting threadpoolctl>=3.5.0 (from scikit-learn->-r /mount/src/ckd/project/requirements.txt (line 4))
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting nvidia-nccl-cu12 (from xgboost->-r /mount/src/ckd/project/requirements.txt (line 5))
+  Downloading nvidia_nccl_cu12-2.30.7-py3-none-manylinux_2_18_x86_64.whl.metadata (2.1 kB)
+Collecting tqdm>=4.27.0 (from shap->-r /mount/src/ckd/project/requirements.txt (line 6))
+  Downloading tqdm-4.68.4-py3-none-any.whl.metadata (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.4/57.4 kB 307.2 MB/s eta 0:00:00[2026-07-07 19:46:37.553514] 
+Collecting slicer==0.0.8 (from shap->-r /mount/src/ckd/project/requirements.txt (line 6))
+  Downloading slicer-0.0.8-py3-none-any.whl.metadata (4.0 kB)
+Collecting numba (from shap->-r /mount/src/ckd/project/requirements.txt (line 6))
+  Downloading numba-0.66.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+Collecting llvmlite (from shap->-r /mount/src/ckd/project/requirements.txt (line 6))
+  Downloading llvmlite-0.48.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.0 kB)
+Collecting cloudpickle (from shap->-r /mount/src/ckd/project/requirements.txt (line 6))
+  Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting contourpy>=1.0.1 (from matplotlib->-r /mount/src/ckd/project/requirements.txt (line 7))
+  Downloading contourpy-1.3.3-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib->-r /mount/src/ckd/project/requirements.txt (line 7))
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib->-r /mount/src/ckd/project/requirements.txt (line 7))
+  Downloading fonttools-4.63.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.7/118.7 kB 174.4 MB/s eta 0:00:00[2026-07-07 19:46:38.264735] 
+Collecting kiwisolver>=1.3.1 (from matplotlib->-r /mount/src/ckd/project/requirements.txt (line 7))
+  Downloading kiwisolver-1.5.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+Collecting pyparsing>=3 (from matplotlib->-r /mount/src/ckd/project/requirements.txt (line 7))
+  Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Collecting jinja2 (from altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting jsonschema>=3.0 (from altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting idna>=2.8 (from anyio>=4.0.0->streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+Collecting gitdb<5,>=4.0.1 (from gitpython!=3.1.19,<4,>=3.0.7->streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r /mount/src/ckd/project/requirements.txt (line 2))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting charset_normalizer<4,>=2 (from requests<3,>=2.27->streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading charset_normalizer-3.4.9-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.7/41.7 kB 208.5 MB/s eta 0:00:00[2026-07-07 19:46:39.188641] 
+Collecting urllib3<3,>=1.26 (from requests<3,>=2.27->streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2023.5.7 (from requests<3,>=2.27->streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading certifi-2026.6.17-py3-none-any.whl.metadata (2.5 kB)
+Collecting h11>=0.8 (from uvicorn>=0.30.0->streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting numpy (from -r /mount/src/ckd/project/requirements.txt (line 3))
+  Downloading numpy-2.4.6-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading smmap-5.0.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting MarkupSafe>=2.0 (from jinja2->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading markupsafe-3.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting attrs>=22.2.0 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit->-r /mount/src/ckd/project/requirements.txt (line 1))
+  Downloading rpds_py-2026.6.3-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Downloading streamlit-1.59.0-py3-none-any.whl (10.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.3/10.3 MB 28.5 MB/s eta 0:00:00[2026-07-07 19:46:40.864837] 
+Downloading pandas-3.0.3-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 31.1 MB/s eta 0:00:00[2026-07-07 19:46:41.229227] 
+Downloading scikit_learn-1.9.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 34.6 MB/s eta 0:00:00[2026-07-07 19:46:41.508280] 
+Downloading xgboost-3.3.0-py3-none-manylinux_2_28_x86_64.whl (98.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 MB 53.4 MB/s eta 0:00:00
+Downloading shap-0.52.0-cp312-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (498 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 498.0/498.0 kB 58.4 MB/s eta 0:00:00[2026-07-07 19:46:43.730171] 
+Downloading slicer-0.0.8-py3-none-any.whl (15 kB)
+Downloading matplotlib-3.11.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (11.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.1/11.1 MB 53.0 MB/s eta 0:00:00[2026-07-07 19:46:43.965980] 
+Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 309.1/309.1 kB 183.3 MB/s eta 0:00:00[2026-07-07 19:46:43.983017] 
+Downloading altair-6.2.2-py3-none-any.whl (797 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.6/797.6 kB 74.1 MB/s eta 0:00:00[2026-07-07 19:46:44.010094] 
+Downloading anyio-4.14.1-py3-none-any.whl (124 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.9/124.9 kB 257.7 MB/s eta 0:00:00[2026-07-07 19:46:44.028015] 
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading cachetools-7.1.4-py3-none-any.whl (16 kB)
+Downloading click-8.4.2-py3-none-any.whl (119 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 119.2/119.2 kB 232.3 MB/s eta 0:00:00[2026-07-07 19:46:44.070765] 
+Downloading contourpy-1.3.3-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (363 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 363.8/363.8 kB 93.2 MB/s eta 0:00:00[2026-07-07 19:46:44.089499] 
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.63.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 61.5 MB/s eta 0:00:00[2026-07-07 19:46:44.197862] 
+Downloading gitpython-3.1.50-py3-none-any.whl (212 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 212.5/212.5 kB 213.7 MB/s eta 0:00:00[2026-07-07 19:46:44.212925] 
+Downloading httptools-0.8.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (481 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 481.6/481.6 kB 108.6 MB/s eta 0:00:00[2026-07-07 19:46:44.232387] 
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading kiwisolver-1.5.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 64.3 MB/s eta 0:00:00[2026-07-07 19:46:44.288620] 
+Downloading narwhals-2.23.0-py3-none-any.whl (458 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 458.9/458.9 kB 121.4 MB/s eta 0:00:00[2026-07-07 19:46:44.307891] 
+Downloading packaging-26.2-py3-none-any.whl (100 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.2/100.2 kB 259.3 MB/s eta 0:00:00[2026-07-07 19:46:44.323669] 
+Downloading pillow-12.3.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 56.3 MB/s eta 0:00:00[2026-07-07 19:46:44.461817] 
+Downloading protobuf-7.35.1-cp310-abi3-manylinux2014_x86_64.whl (327 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 327.1/327.1 kB 81.5 MB/s eta 0:00:00[2026-07-07 19:46:44.479980] 
+Downloading pyarrow-24.0.0-cp314-cp314-manylinux_2_28_x86_64.whl (48.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.9/48.9 MB 36.9 MB/s eta 0:00:00[2026-07-07 19:46:45.689988] 
+Downloading pydeck-0.9.3-py2.py3-none-any.whl (11.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.4/11.4 MB 38.5 MB/s eta 0:00:00[2026-07-07 19:46:46.001149] 
+Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 122.8/122.8 kB 262.8 MB/s eta 0:00:00[2026-07-07 19:46:46.017764] 
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 141.1 MB/s eta 0:00:00[2026-07-07 19:46:46.034816] 
+Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 208.8 MB/s eta 0:00:00[2026-07-07 19:46:46.063404] 
+Downloading scipy-1.18.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 46.4 MB/s eta 0:00:00[2026-07-07 19:46:46.874845] 
+Downloading starlette-1.3.1-py3-none-any.whl (73 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.6/73.6 kB 230.1 MB/s eta 0:00:00[2026-07-07 19:46:46.888851] 
+Downloading tenacity-9.1.4-py3-none-any.whl (28 kB)
+Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Downloading tqdm-4.68.4-py3-none-any.whl (676 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 676.6/676.6 kB 55.2 MB/s eta 0:00:00
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 148.4 MB/s eta 0:00:00[2026-07-07 19:46:46.968693] 
+Downloading uvicorn-0.50.2-py3-none-any.whl (72 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.8/72.8 kB 179.8 MB/s eta 0:00:00[2026-07-07 19:46:46.984551] 
+Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl (79 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.1/79.1 kB 228.1 MB/s eta 0:00:00[2026-07-07 19:46:46.998663] 
+Downloading websockets-16.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (185 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 185.0/185.0 kB 159.2 MB/s eta 0:00:00[2026-07-07 19:46:47.013853] 
+Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Downloading llvmlite-0.48.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (59.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.9/59.9 MB 57.0 MB/s eta 0:00:00[2026-07-07 19:46:48.179922] 
+Downloading numba-0.66.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 62.5 MB/s eta 0:00:00[2026-07-07 19:46:48.258309] 
+Downloading numpy-2.4.6-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 60.9 MB/s eta 0:00:00[2026-07-07 19:46:48.547942] 
+Downloading nvidia_nccl_cu12-2.30.7-py3-none-manylinux_2_18_x86_64.whl (303.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 303.4/303.4 MB 75.0 MB/s eta 0:00:00[2026-07-07 19:46:54.046025] 
+Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.3/133.3 kB 167.7 MB/s eta 0:00:00[2026-07-07 19:46:54.061832] 
+Downloading charset_normalizer-3.4.9-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (223 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 223.1/223.1 kB 279.1 MB/s eta 0:00:00[2026-07-07 19:46:54.077472] 
+Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 228.8 MB/s eta 0:00:00[2026-07-07 19:46:54.091270] 
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading idna-3.18-py3-none-any.whl (65 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 339.7 MB/s eta 0:00:00[2026-07-07 19:46:54.116882] 
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 305.8 MB/s eta 0:00:00[2026-07-07 19:46:54.139145] 
+Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 kB 320.1 MB/s eta 0:00:00[2026-07-07 19:46:54.153122] 
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.1/131.1 kB 190.0 MB/s eta 0:00:00[2026-07-07 19:46:54.181385] 
+Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.5/67.5 kB 322.1 MB/s eta 0:00:00[2026-07-07 19:46:54.196254] 
+Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading markupsafe-3.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (23 kB)
+Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading rpds_py-2026.6.3-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (367 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 367.3/367.3 kB 161.0 MB/s eta 0:00:00[2026-07-07 19:46:54.247819] 
+Downloading smmap-5.0.3-py3-none-any.whl (24 kB)
+Installing collected packages: websockets, watchdog, urllib3, typing-extensions, tqdm, toml, threadpoolctl, tenacity, smmap, slicer, six, rpds-py, python-multipart, pyparsing, pyarrow, protobuf, pillow, packaging, nvidia-nccl-cu12, numpy, narwhals, MarkupSafe, llvmlite, kiwisolver, joblib, itsdangerous, idna, httptools, h11, fonttools, cycler, cloudpickle, click, charset_normalizer, certifi, cachetools, blinker, attrs, uvicorn, scipy, requests, referencing, python-dateutil, numba, jinja2, gitdb, contourpy, anyio, xgboost, starlette, scikit-learn, pydeck, pandas, matplotlib, jsonschema-specifications, gitpython, shap, jsonschema, altair, streamlit
+Successfully installed MarkupSafe-3.0.3 altair-6.2.2 anyio-4.14.1 attrs-26.1.0 blinker-1.9.0 cachetools-7.1.4 certifi-2026.6.17 charset_normalizer-3.4.9 click-8.4.2 cloudpickle-3.1.2 contourpy-1.3.3 cycler-0.12.1 fonttools-4.63.0 gitdb-4.0.12 gitpython-3.1.50 h11-0.16.0 httptools-0.8.0 idna-3.18 itsdangerous-2.2.0 jinja2-3.1.6 joblib-1.5.3 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 kiwisolver-1.5.0 llvmlite-0.48.0 matplotlib-3.11.0 narwhals-2.23.0 numba-0.66.0 numpy-2.4.6 nvidia-nccl-cu12-2.30.7 packaging-26.2 pandas-3.0.3 pillow-12.3.0 protobuf-7.35.1 pyarrow-24.0.0 pydeck-0.9.3 pyparsing-3.3.2 python-dateutil-2.9.0.post0 python-multipart-0.0.32 referencing-0.37.0 requests-2.34.2 rpds-py-2026.6.3 scikit-learn-1.9.0 scipy-1.18.0 shap-0.52.0 six-1.17.0 slicer-0.0.8 smmap-5.0.3 starlette-1.3.1 streamlit-1.59.0 tenacity-9.1.4 threadpoolctl-3.6.0 toml-0.10.2 tqdm-4.68.4 typing-extensions-4.16.0 urllib3-2.7.0 uvicorn-0.50.2 watchdog-6.0.0 websockets-16.0 xgboost-3.3.0
+
+[notice] A new release of pip is available: 24.0 -> 26.1.2
+[notice] To update, run: pip install --upgrade pip
+Checking if Streamlit is installed
+Found Streamlit version 1.59.0 in the environment
+Installing rich for an improved exception logging
+Using standard pip install.
+Collecting rich>=10.14.0
+  Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=10.14.0)
+  Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=10.14.0)
+  Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=10.14.0)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 15.9 MB/s eta 0:00:00[2026-07-07 19:47:37.184719] 
+Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 kB 252.0 MB/s eta 0:00:00[2026-07-07 19:47:37.197646] 
+Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 93.3 MB/s eta 0:00:00[2026-07-07 19:47:37.223268] 
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: pygments, mdurl, markdown-it-py, rich
+  Attempting uninstall: pygments
+    Found existing installation: Pygments 2.20.0
+    Uninstalling Pygments-2.20.0:
+      Successfully uninstalled Pygments-2.20.0
+  Attempting uninstall: mdurl
+    Found existing installation: mdurl 0.1.2
+    Uninstalling mdurl-0.1.2:
+      Successfully uninstalled mdurl-0.1.2
+  Attempting uninstall: markdown-it-py
+    Found existing installation: markdown-it-py 4.2.0
+    Uninstalling markdown-it-py-4.2.0:
+      Successfully uninstalled markdown-it-py-4.2.0
+  Attempting uninstall: rich
+    Found existing installation: rich 15.0.0
+    Uninstalling rich-15.0.0:
+      Successfully uninstalled rich-15.0.0
+Successfully installed markdown-it-py-4.2.0 mdurl-0.1.2 pygments-2.20.0 rich-15.0.0
+
+[notice] A new release of pip is available: 24.0 -> 26.1.2
+[notice] To update, run: pip install --upgrade pip
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[19:47:40] 🐍 Python dependencies were installed from /mount/src/ckd/project/requirements.txt using pip.
+Check if streamlit is installed
+Streamlit is already installed
+[19:47:41] 📦 Processed dependencies!
+2026-07-07 19:47:43.428 Uvicorn server started on :::8501
+
+
+
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.14/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:795 in code_to_exec                                     
+                                                                                
+  /mount/src/ckd/project/app.py:74 in <module>                                  
+                                                                                
+    71 │   │   │   │   │   │   │   │      columns=['age', 'bp', 'sg', 'al', 's  
+    72 │   │   │   │   │   │   │   │   │   │   │   'rbc', 'pc', 'pcc', 'ba', '  
+    73 │   │                                                                    
+  ❱ 74 │   │   result = predict_risk(model, preprocessor, input_data)           
+    75 │   │                                                                    
+    76 │   │   st.subheader("Hasil Diagnosis")                                  
+    77 │   │   if result['label'] == "CKD":                                     
+                                                                                
+  /mount/src/ckd/project/utils/predictor.py:4 in predict_risk                   
+                                                                                
+    1 import numpy as np                                                        
+    2                                                                           
+    3 def predict_risk(model, preprocessor, input_df):                          
+  ❱ 4 │   processed_data = preprocessor.transform(input_df)                     
+    5 │   prob = model.predict_proba(processed_data)[0][1]                      
+    6 │   label = "CKD" if prob > 0.5 else "Non-CKD"                            
+    7 │   return {'label': label, 'prob': prob}                                 
+────────────────────────────────────────────────────────────────────────────────
+AttributeError: 'NoneType' object has no attribute 'transform'
